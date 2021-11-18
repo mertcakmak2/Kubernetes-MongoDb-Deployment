@@ -20,7 +20,7 @@ kubectl get configmap -n mongo-k8s
 
 # Mongo Db Deployment
 
-kubectl apply -f mongodb.deployment.yaml
+kubectl apply -f mongodb-deployment.yaml
 
 kubectl get deployment -n mongo-k8s
 
