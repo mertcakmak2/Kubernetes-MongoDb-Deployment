@@ -50,9 +50,9 @@ spec:
               secretKeyRef:
                 name: mongodb-secret
                 key: mongo-root-password
-        volumeMounts:
-          - mountPath: /data/db
-            name: mongo-pv
+        # volumeMounts:
+        #   - mountPath: /data/db
+        #     name: mongo-pv
         resources:
           limits:
             memory: "1Gi"
@@ -60,10 +60,10 @@ spec:
           requests:
             memory: "256Mi"
             cpu: "500m"
-      volumes:
-        - name: mongo-pv
-          persistentVolumeClaim:
-            claimName: mongo-pvc
+      # volumes:
+      #   - name: mongo-pv
+      #     persistentVolumeClaim:
+      #       claimName: mongo-pvc
 # ---
 # apiVersion: v1
 # kind: PersistentVolume
