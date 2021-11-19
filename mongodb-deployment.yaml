@@ -64,3 +64,37 @@ spec:
         - name: mongo-pv
           persistentVolumeClaim:
             claimName: mongo-pvc
+# ---
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#   name: mongo-pv
+#   namespace: mongo-k8s
+#   labels:
+#     app: mongodb
+# spec:
+#   capacity:
+#     storage: 20Gi
+#   volumeMode: Filesystem
+#   accessModes:
+#     - ReadWriteOnce
+#   persistentVolumeReclaimPolicy: Recycle
+#   storageClassName: standard
+#   hostPath:
+#     path: /mnt/k8s/mongo
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: mongo-pvc
+#   namespace: mongo-k8s
+# spec:
+#   resources:
+#     requests:
+#       storage: 10Gi
+#   volumeMode: Filesystem
+#   accessModes:
+#     - ReadWriteOnce
+#   selector:
+#     matchLabels: 
+#       app: mongodb
