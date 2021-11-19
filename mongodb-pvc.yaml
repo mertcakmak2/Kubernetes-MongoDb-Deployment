@@ -13,4 +13,4 @@ spec:
   selector:
     matchLabels: 
       app: mongodb
-  storageClassName: faskdisk
+  storageClassName: standarddisk
